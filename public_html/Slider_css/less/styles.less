@@ -1,0 +1,34 @@
+#contenedor{
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+    max-width:1200px;
+    .box{
+        width: 300%;
+        animation: Slider 18s infinite;
+        position: relative;
+        .img{
+            width: (100/3)*1%;
+            float: left;
+        }
+        img{
+            max-width: 100%;
+            height: auto !important;
+        }
+    }
+}
+
+@keyframes Slider{
+    0%{
+        left:0%;
+    }
+    33%{
+        left:-100%;
+    }
+    66%{
+        left:-200%;
+    }
+    100%{
+        left:0%;
+    }
+}

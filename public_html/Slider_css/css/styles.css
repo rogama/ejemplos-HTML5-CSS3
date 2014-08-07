@@ -1,0 +1,48 @@
+#contenedor {
+  overflow: hidden;
+  margin: auto;
+  width: 80%;
+  max-width: 1200px;
+}
+#contenedor .box {
+  width: 300%;
+  -webkit-animation: Slider 18s infinite;
+  animation: Slider 18s infinite;
+  position: relative;
+}
+#contenedor .box .img {
+  width: 33.33333333%;
+  float: left;
+}
+#contenedor .box img {
+  max-width: 100%;
+  height: auto !important;
+}
+@-webkit-keyframes Slider {
+  0% {
+    left: 0%;
+  }
+  33% {
+    left: -100%;
+  }
+  66% {
+    left: -200%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes Slider {
+  0% {
+    left: 0%;
+  }
+  33% {
+    left: -100%;
+  }
+  66% {
+    left: -200%;
+  }
+  100% {
+    left: 0%;
+  }
+}

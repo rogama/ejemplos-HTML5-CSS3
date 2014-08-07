@@ -1,0 +1,120 @@
+a.openModal { 
+    margin: 1em auto; 
+    display: block; 
+    width: 200px; 
+    background: #ccc; 
+    text-align: center; 
+    text-decoration: none; 
+    color: black; 
+    padding: 10px; 
+    border-radius: 7px; 
+    background: linear-gradient(#fff, #ddd); 
+    //background: -webkit-gradient(linear, right top, right bottom, from(rgb(255,255,255)), to(rgb(230,230,230))); 
+    text-shadow: 0 1px 0 #fff; 
+    border: 1px solid rgba(0,0,0,0.1); 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+}
+
+.modal > div { 
+    width: 500px; 
+    background: #fff; 
+    position: relative; 
+    margin: 10% auto; 
+    /* Prettify */ 
+    padding: 30px; 
+    border-radius: 7px; 
+    box-shadow: 0 3px 20px rgba(0,0,0,0.9); 
+    background: linear-gradient(#fff, #ccc); 
+    //background: -webkit-gradient(linear, right bottom, right top, color-stop(1, rgb(255,255,255)), color-stop(0.57, rgb(230,230,230))); 
+    text-shadow: 0 1px 0 #fff; 
+}
+.modal a[href="#close"] { 
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    color: transparent; 
+}
+.modal a[href="#close"]:after { 
+    content: 'X'; 
+    display: block; 
+    /* Position */ 
+    position: absolute; 
+    right: -10px; 
+    top: -10px; 
+    width: 1.5em; 
+    padding: 1px 1px 1px 2px; 
+    /* Style */ 
+    text-decoration: none; 
+    text-shadow: none; 
+    text-align: center; 
+    font-weight: bold; 
+    background: #000; 
+    color: #fff; 
+    border: 3px solid #fff; 
+    border-radius: 20px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5); 
+}
+
+.modal a[href="#close"]:focus:after, 
+.modal a[href="#close"]:hover:after { 
+    transform: scale(1.1,1.1); 
+} 
+.modal a[href="#close"]:focus:after { 
+    outline: 1px solid #000; 
+}
+.modal { 
+    /* Overlay page content */ 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5); 
+    z-index: 10000; 
+    /* Hide for now */ 
+    opacity: 0; 
+    pointer-events: none; 
+    /* Transformación de la transparencia al abrir la ventana */ 
+    transition: opacity 500ms ease-in; 
+}
+.modal:target > div { 
+    animation-name: bounce; 
+}
+
+@-webkit-keyframes bounce { 
+    0% { 
+        transform: scale3d(0.1,0.1,1); 
+        box-shadow: 0 3px 20px rgba(0,0,0,0.9); 
+    } 
+    55% { 
+        transform: scale3d(1.08,1.08,1); 
+        box-shadow: 0 10px 20px rgba(0,0,0,0); 
+    } 
+    75% { 
+        transform: scale3d(0.95,0.95,1); 
+        box-shadow: 0 0 20px rgba(0,0,0,0.9); 
+    } 
+    100% { 
+        transform: scale3d(1,1,1); 
+        box-shadow: 0 3px 20px rgba(0,0,0,0.9); 
+    } 
+}
+
+.modal:target { 
+    opacity: 1; 
+    pointer-events: auto;
+}
+
+.modal > div { 
+    /* Aplicación de la animación de cierre */ 
+    animation: minimise 500ms linear; 
+}
+
+@-webkit-keyframes minimise { 
+    0% { 
+        transform: scale3d(1,1,1); 
+    } 
+    100% { 
+        transform: scale3d(0.1,0.1,1); 
+    } 
+}
