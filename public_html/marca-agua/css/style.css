@@ -1,0 +1,23 @@
+.marca-de-agua {
+  background-image: url("../img/rogamaLogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.marca-de-agua img {
+  padding: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+.marca-de-agua img:hover {
+  opacity: 1;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+.wrapper {
+  max-width: 500px;
+  margin: auto;
+}

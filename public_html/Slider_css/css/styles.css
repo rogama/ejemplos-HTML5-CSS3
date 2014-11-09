@@ -17,6 +17,7 @@
 #contenedor .box img {
   max-width: 100%;
   height: auto !important;
+  color: black;
 }
 @-webkit-keyframes Slider {
   0% {
