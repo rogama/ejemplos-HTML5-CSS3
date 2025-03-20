@@ -1,0 +1,35 @@
+<!Doctype html>
+<head>
+    <style>
+        header {
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            animation: adjust-header linear both;
+            animation-timeline: scroll();
+            animation-range: 0 100px;
+            height: 10vh;
+        }
+
+        @keyframes adjust-header {
+            to {
+                background: rgba(0, 0, 0, .3);
+                font-size: 12px;
+                height: 32px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header style="background: yellow;">
+    <h1>Mi Titulo</h1>
+</header>
+<main>
+    <div style="background: red;height: 300px; width: 49%;display: inline-block"></div>
+    <div style="background: blue;height: 900px; width: 49%;display: inline-block"></div>
+    <div style="background: purple;height: 900px; width: 49%;display: inline-block"></div>
+    <div style="background: black;height: 300px; width: 49%;display: inline-block"></div>
+</main>
+</body>
+</html>
